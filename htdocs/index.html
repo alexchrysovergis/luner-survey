@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Join Luner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../src/dist/css/styles.min.css">
+</head>
+<body>
+  <h1 id="title">Junior Front-End Web Developer</h1>
+  <p id="description">Do you think you've got what it takes to become Luner's next star? Then fill out the form below.</p>
+  
+  <form id="survey-form">
+    <fieldset class="personal-info">
+      <label id="name-label" for="name"> Name
+        <input id="name" name="name" type="text" placeholder="Enter your name" required>
+      </label>
+      <label id="email-label" for="email"> Email
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+      </label>
+      <label id="number-label" for="number"> Age
+        <input id="number" name="age" type="number" placeholder="Enter your age" min="18" max="30">
+      </label>
+      <label for="phone"> Phone
+        <input type="tel" id="phone" name="phone" placeholder="555-555-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+      </label>
+    </fieldset>
+    
+    <fieldset>
+      <label for="dropdown"> Please choose a type of employment
+        <select id="dropdown" name="employment">
+          <option>Full-Time</option>
+          <option>Part-Time</option>
+          <option>Seasonal</option>
+        </select>
+      </label>
+    </fieldset>
+    
+    <fieldset class="eligibility">
+      <p>Are you legally authorized to work in the United States of America?</p>
+      <label id="yes-label" for="positive"><input id="positive" type="radio" name="eligibility" value="yes" checked> Yes</label>
+      <label id="no-label" for="negative"><input id="negative" type="radio" name="eligibility" value="no"> No</label>
+    </fieldset>
+    
+    <fieldset class="skills">
+          <label for="html">
+      <input id="html" name="html" type="checkbox" value="html"> HTML
+    </label>
+    <label for="css">
+      <input id="css" name="css" type="checkbox" value="css"> CSS
+    </label>
+    <label for="scss">
+      <input id="scss" name="scss" type="checkbox" value="scss"> SCSS
+    </label>
+    <label for="tailwind">
+      <input id="tailwind" name="tailwind" type="checkbox" value="tailwind"> Tailwind CSS
+    </label>
+      <label for="bootstrap">
+      <input id="bootstrap" name="bootstrap" type="checkbox" value="bootstrap"> Bootstrap
+    </label>
+    <label for="js">
+      <input id="js" name="js" type="checkbox" value="js"> Javascript
+    </label>
+      <label for="react">
+      <input id="react" name="react" type="checkbox" value="react"> React
+    </label>
+    <label for="php">
+      <input id="php" name="php" type="checkbox" value="php"> PHP
+    </label>
+      <label for="laravel">
+      <input id="laravel" name="laravel" type="checkbox" value="laravel"> Laravel
+    </label>
+    </fieldset>
+    
+    <fieldset>
+      <label for="pitch">Pitch yourself!
+        <textarea id="pitch" name="pitch" placeholder="Tell us about yourself..."></textarea>
+      </label>
+    </fieldset>
+    
+    <input id="submit" type="submit" value="Submit">
+  </form>
+
+</body>
+</html>
