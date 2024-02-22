@@ -12,26 +12,26 @@ body {
   color: map-get($theme-colors, project-white);
   font-family: $roboto;
   text-align: center;
-}
 
-h1{
-  font-family: $playfairBl;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to right, map-get($theme-colors, primary), map-get($theme-colors, secondary));
-  z-index: -1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, map-get($theme-colors, primary), map-get($theme-colors, secondary));
+    z-index: -1;
+  }
 }
 
 body * {
   position: relative;
   z-index: 1;
+}
+
+h1{
+  font-family: $playfairBl;
 }
 
 fieldset{
@@ -101,7 +101,6 @@ input[type="radio"]{
   width: unset;
   @include input-styles;
 }
-
 
 .eligibility p, .eligibility label{
   font-size: 1.5rem;
