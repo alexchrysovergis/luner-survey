@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 @import 'variables';
 @import 'mixins';
+@import 'fonts';
 
 body {
   width: 100%;
@@ -9,17 +8,14 @@ body {
   padding: 4em 0;
   margin: 0;
   position: relative; 
-  background-image: url("https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: url("https://images.pexels.com/photos/1181263/pexels-photo-1181263.jpeg") center / cover no-repeat;
   color: map-get($theme-colors, project-white);
-  font-family: 'Roboto', sans-serif;
+  font-family: $roboto;
   text-align: center;
 }
 
 h1{
-  font-family: 'Playfair Display', serif;
+  font-family: $playfairBl;
 }
 
 body::before {
@@ -45,7 +41,7 @@ fieldset{
 input,
 textarea,
 select {
-  font-family: Roboto;
+  font-family: $roboto;
   border: none;
   width: 100%;
   min-height: 1em;
@@ -96,40 +92,19 @@ input[type="checkbox"]{
   padding: 1.2rem;
   margin-right: .5rem;
   font-size: .5em;
-  width: unset;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: map-get($theme-colors, project-white);
-  cursor: pointer;
-  border-radius: .3em;
-  transition: background-color 0.3s ease-in-out;
-}
-
-input[type="checkbox"]:checked{
-  background-color: map-get($theme-colors, primary);
-}
-
-.eligibility p, .eligibility label{
-  font-size: 1.5rem;
+  @include input-styles;
 }
 
 input[type="radio"]{
   padding: 1.2rem;
   font-size: 1rem;
   width: unset;
-  vertical-align: middle;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: map-get($theme-colors, project-white);
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  @include input-styles;
 }
 
-input[type="radio"]:checked{
-  background-color: map-get($theme-colors, primary);
+
+.eligibility p, .eligibility label{
+  font-size: 1.5rem;
 }
 
 .skills{
@@ -149,14 +124,12 @@ input[type="submit"]{
   border: none;
   color: #f5f6f7;
   transition: background-color 0.3s ease-in-out;
-}
-
-input[type="submit"]:hover{
-  background-color: map-get($theme-colors, primary-hover);
-}
-
-input[type="submit"]:active{
-  background-color: map-get($theme-colors, primary-active);
+  &:hover{
+    background-color: map-get($theme-colors, primary-hover);
+  }
+  &:active{
+    background-color: map-get($theme-colors, primary-active);
+  }
 }
 
 textarea{
